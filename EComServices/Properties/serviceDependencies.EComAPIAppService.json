@@ -1,11 +1,6 @@
 {
   "dependencies": {
-    "apis1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/EComServicesapi/apis/EComServices",
-      "type": "apis.azure"
-    },
     "apis2": {
-      "apiEndpoint": "https://ecomservicesapi.azure-api.net/ECom",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/EComServicesapi/apis/EComServices",
       "type": "apis.azure"
     }
