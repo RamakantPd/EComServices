@@ -69,13 +69,13 @@ namespace EComServices.Controllers
                     }
                     catch (Exception ex)
                     {
-                        throw ex;
+                        throw new NotImplementedException(ex.Message);
                     }
                 }
             }
             catch (Exception e)
             {
-                throw e;
+                throw new NotImplementedException(e.Message);
             }
         }
 
@@ -90,7 +90,7 @@ namespace EComServices.Controllers
             }
             catch(Exception e)
             {
-                throw e;
+                throw new NotImplementedException(e.Message);
             }
         }
         private bool CartItemExists(int id)
@@ -124,8 +124,6 @@ namespace EComServices.Controllers
                     throw;
                 }
             }
-
-            //return NoContent();
         }
 
     }
