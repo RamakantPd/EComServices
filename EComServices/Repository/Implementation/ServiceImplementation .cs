@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using EComServices.Lib;
 using EComServices.Models;
 using EComServices.Repository.@interface;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace EComServices.Repository.Implementation
 {
@@ -22,7 +23,7 @@ namespace EComServices.Repository.Implementation
             // _country = country;
         }
 
-        public Task<List<UserLogin>> GetLoginId(UserLogin logincred)
+        public List<UserLogin> GetLoginId(UserLogin logincred)
         {
             List<UserLogin> list = new List<UserLogin>();
             string mailid = logincred.Email_id;
@@ -33,11 +34,11 @@ namespace EComServices.Repository.Implementation
             if (logincred != null)
             {
                 var userpass = BCrypt.Net.BCrypt.HashPassword(pass);
-                if (BCrypt.Net.BCrypt.Verify(logincreden.Password, userpass))
+                if (BCrypt.Net.BCrypt.Verify(logincreden?.Password, userpass))
                 {
 
-                    //list.Add(logincred);
-                    return null;
+                    list.Add(logincred);
+                    return list;
 
                 }
             }
@@ -45,34 +46,23 @@ namespace EComServices.Repository.Implementation
             {
                 throw new NotImplementedException();
             }
-            return null;
+            return list;
         }
 
 
         public async Task<List<CountryListModel>> CountryList()
         {
-            try
-            {
                 var countrlist = await _context.CountryList.ToListAsync();
                 return countrlist;
-            }
-            catch (Exception e)
-            {
-                throw new NotImplementedException();
-            }
+            
 
         }
         public async Task<List<StateListModel>> StateList(int countryCode)
         {
-            try
-            {
+           
                 var statelist = await _context.StateList.Where(x=> x.CountryId== countryCode).ToListAsync();
                 return statelist;
-            }
-            catch (Exception e)
-            {
-                throw new NotImplementedException();
-            }
+            
 
         }
 
@@ -98,7 +88,7 @@ namespace EComServices.Repository.Implementation
             }
             catch (Exception e)
             {
-                throw new NotImplementedException();
+                throw new NotImplementedException(e.Message);
             }
 
             return list;
@@ -112,7 +102,7 @@ namespace EComServices.Repository.Implementation
             int i = 0;
             string mailid = newpass.Email_id;
             string pass = newpass.Password;
-            UserRegistrationModel user = _context.UserRegistration.SingleOrDefault(a => a.Email_Id.Equals(mailid));
+            var user = _context.UserRegistration.SingleOrDefault(a => a.Email_Id == newpass.Email_id);
 
             if (user != null)
             {
@@ -158,7 +148,7 @@ namespace EComServices.Repository.Implementation
             }
             catch (Exception e)
             {
-                throw e;
+                throw new NotImplementedException(e.Message);
             }
             return regis;
         }

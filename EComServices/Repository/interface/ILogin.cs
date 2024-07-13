@@ -8,6 +8,6 @@ namespace EComServices.Repository.@interface
 {
     public interface ILogin
     {
-        public Task<List<UserLogin>> GetLoginId(UserLogin loginCred);
+        public List<UserLogin> GetLoginId(UserLogin loginCred);
     }
 }
