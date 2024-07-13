@@ -1041,11 +1041,10 @@
           }
         }
       },
-      "MimeKit/4.7.1": {
+      "MimeKit/4.7.0": {
         "type": "package",
         "dependencies": {
           "BouncyCastle.Cryptography": "2.4.0",
-          "System.Formats.Asn1": "8.0.1",
           "System.Security.Cryptography.Pkcs": "8.0.0"
         },
         "compile": {
@@ -1702,7 +1701,7 @@
           }
         }
       },
-      "System.Formats.Asn1/8.0.1": {
+      "System.Formats.Asn1/8.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Formats.Asn1.dll": {
@@ -4853,10 +4852,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "MimeKit/4.7.1": {
-      "sha512": "Qoj4aVvhX14A1FNvaJ33hzOP4VZI2j+Mr38I9wSGcjMq4BYDtWLJG89aJ9nRW2cNfH6Czjwyp7+Mh++xv3AZvg==",
+    "MimeKit/4.7.0": {
+      "sha512": "VDqnKACvUiNo5eQshOqB1XzmQROkCSJRkmPu6zj/JqKIn3PID2TtnWGHN5YjkhlLIB7x8MwkXYG6iPLDfiYdcQ==",
       "type": "package",
-      "path": "mimekit/4.7.1",
+      "path": "mimekit/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4891,7 +4890,7 @@
         "lib/netstandard2.1/MimeKit.dll.config",
         "lib/netstandard2.1/MimeKit.pdb",
         "lib/netstandard2.1/MimeKit.xml",
-        "mimekit.4.7.1.nupkg.sha512",
+        "mimekit.4.7.0.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -5980,10 +5979,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Formats.Asn1/8.0.1": {
-      "sha512": "XqKba7Mm/koKSjKMfW82olQdmfbI5yqeoLV/tidRp7fbh5rmHAQ5raDI/7SU0swTzv+jgqtUGkzmFxuUg0it1A==",
+    "System.Formats.Asn1/8.0.0": {
+      "sha512": "AJukBuLoe3QeAF+mfaRKQb2dgyrvt340iMBHYv+VdBzCUM06IxGlvl0o/uPOS7lHnXPN6u8fFRHSHudx5aTi8w==",
       "type": "package",
-      "path": "system.formats.asn1/8.0.1",
+      "path": "system.formats.asn1/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6004,7 +6003,7 @@
         "lib/net8.0/System.Formats.Asn1.xml",
         "lib/netstandard2.0/System.Formats.Asn1.dll",
         "lib/netstandard2.0/System.Formats.Asn1.xml",
-        "system.formats.asn1.8.0.1.nupkg.sha512",
+        "system.formats.asn1.8.0.0.nupkg.sha512",
         "system.formats.asn1.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -9220,7 +9219,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
-      "MimeKit >= 4.7.1",
+      "MimeKit >= 4.7.0",
       "NETCore.MailKit >= 2.1.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -9232,11 +9231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EComServices\\EComServices\\EComServices.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\EComServices\\EComServices\\EComServices.csproj",
       "projectName": "EComServices",
-      "projectPath": "D:\\EComServices\\EComServices\\EComServices.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\EComServices\\EComServices\\EComServices.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\EComServices\\EComServices\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\EComServices\\EComServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9309,7 +9308,7 @@
           },
           "MimeKit": {
             "target": "Package",
-            "version": "[4.7.1, )"
+            "version": "[4.7.0, )"
           },
           "NETCore.MailKit": {
             "target": "Package",
@@ -9342,5 +9341,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MimeKit' 4.7.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-gmc6-fwg3-75m5",
+      "libraryId": "MimeKit",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
