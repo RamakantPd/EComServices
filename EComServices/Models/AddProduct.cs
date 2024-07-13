@@ -11,7 +11,7 @@ namespace EComServices.Models
         public int ProductId { get; set; }
         public string? ProductType { get; set; } 
         [Required(ErrorMessage ="Please Enter Product Name")]
-        public string? Product_Name { get; set; }
+        public string Product_Name { get; set; } = string.Empty;
 
     }
 }
