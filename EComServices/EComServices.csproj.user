@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Users\Admin\source\repos\EComServices\.github\workflows\EComAPIAppService.yml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\EComServices\.github\workflows\EComAPIAppService.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
